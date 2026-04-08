@@ -5,7 +5,7 @@ main {
 }
 
 .content-section {
-  width: 1052px;
+  width: 1100px;
   margin: 0 auto;
 }
 
@@ -16,8 +16,13 @@ main {
   padding: 92px 50px 96px;
 }
 
+.header__menu {
+  justify-self: start;
+}
+
 .header__links-list {
   display: flex;
+  align-items: center;
   gap: 32px;
 }
 
@@ -52,9 +57,11 @@ main {
   justify-self: center;
   align-self: center;
   width: 148px;
+  height: 105px;
 }
 
 .header__logo-image {
+  display: block;
   width: 100%;
 }
 
@@ -81,10 +88,13 @@ main {
 
 .cover {
   position: relative;
+  min-height: 757px;
   padding: 165px 50px 50px 50px;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  z-index: 0;
 }
 
 .overlay {
@@ -141,7 +151,7 @@ main {
   z-index: 1;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: baseline;
   gap: 78px;
   padding: 135px 0 0;
 }
@@ -155,11 +165,13 @@ main {
 }
 
 .bet-button {
+  width: 256px;
+  min-height: 51px;
   border: 1px #FFF solid;
-  padding: 12px 32px;
+  padding: 0;
   color: #FFF;
   font-family: 'Raleway', sans-serif;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 22px;
   line-height: 1;
   text-transform: uppercase;
@@ -173,7 +185,7 @@ main {
 }
 
 .lots {
-  padding: 0 50px;
+  padding: 0 24px;
 }
 
 .lots__heading {
@@ -185,15 +197,16 @@ main {
 }
 
 .lots__card-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 25px;
-  row-gap: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
   list-style: none;
 }
 
 .lots__card-list-item {
-  height: 100%;
+  width: 334px;
+  min-height: 563px;
+  flex-grow: 1;
 }
 
 .card-link {
@@ -208,8 +221,9 @@ main {
   flex-direction: column;
   justify-content: space-between;
   gap: 30px;
-  min-height: 563px;
+  height: 100%;
   padding: 50px 40px;
+  background-position: center;
 }
 
 .card_type_film {
@@ -260,9 +274,9 @@ main {
 
 .about {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 334px 1fr;
   gap: 25px;
-  padding: 0 50px;
+  padding: 35px 24px 0;
 }
 
 .about__column {
@@ -285,6 +299,7 @@ main {
 
 .about__logo-image {
   width: 148px;
+  height: 114px;
 }
 
 .about__title {
@@ -307,14 +322,20 @@ main {
 }
 
 .footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 180px 50px 90px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: flex-start;
+  gap: 140px;
+  padding: 125px 50px 88px;
 }
 
 .footer__social-icon {
   width: 48px;
   height: 48px;
+}
+
+.footer__menu {
+  padding-left: 35px;
 }
 
 .footer__menu-list {
@@ -336,4 +357,8 @@ main {
   display: flex;
   gap: 48px;
   list-style: none;
+}
+
+.footer__social-link {
+  display: block;
 }
